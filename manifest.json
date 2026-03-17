@@ -1,0 +1,21 @@
+{
+  "name": "Best Fire Services",
+  "short_name": "Best Fire",
+  "description": "Trusted supplier of ISI certified fire extinguishers and fire safety equipment in Vapi, Daman, Silvassa.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#d90429",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
