@@ -140,7 +140,49 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --- Form Submission Handling ---
-  // The default prevent has been removed to allow the FormSubmit action to work.
-  // The form will now actually send an email instead of just showing a popup.
+  const contactForms = document.querySelectorAll('form');
+  contactForms.forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Enquiry';
+      if (submitBtn) {
+        submitBtn.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
+        submitBtn.disabled = true;
+      }
+
+      fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          alert('enquiry sent. thanks for your time, we will contact you as soon as we can');
+          form.reset();
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              alert(data["errors"].map(error => error["message"]).join(", "));
+            } else {
+              alert('Oops! There was a problem submitting your form.');
+            }
+          });
+        }
+      })
+      .catch(error => {
+        alert('Oops! There was a problem submitting your form.');
+      })
+      .finally(() => {
+        if (submitBtn) {
+           submitBtn.innerHTML = originalBtnText;
+           submitBtn.disabled = false;
+        }
+      });
+    });
+  });
 
 });
