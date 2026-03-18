@@ -67,7 +67,7 @@
             
             <div class="grid-3 reveal">
                 <!-- Product 1 -->
-                <div class="card">
+                <div class="card" id="abcCard" style="cursor: pointer;" onclick="openAbcModal()">
                     <img src="/assets/images/abc_extinguisher.png" alt="ABC Dry Powder" class="card-img" loading="lazy">
                     <div class="card-content">
                         <h3 class="card-title">ABC Dry Powder <i class="fa-solid fa-star text-secondary" style="font-size: 1rem; margin-left: 0.5rem;" title="Bestseller"></i></h3>
@@ -191,6 +191,75 @@
             </div>
         </div>
     </footer>
+
+    <!-- ABC Dry Powder Modal -->
+    <div id="abcModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeAbcModal()"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="modal-header-img">
+                <!-- Using the existing image as placeholder, scaled appropriately in CSS -->
+                <img src="/assets/images/abc_extinguisher.png" alt="ABC Dry Powder Cylinders">
+            </div>
+
+            <div class="modal-body">
+                <p class="modal-lead">WE HAVE <strong>CAPACITY OF 1KG, 2KG, 4KG, 6KG, 9KG ABC S/F TYPE CYLINDERS ISI CERTIFIED</strong> AVAILABLE WITH US.</p>
+                <p class="modal-makes">MAKES: <strong>MAHAVIR, STOPFAST, SAFIRE, SAFEPRO, SAFETYONE, REDBOTTLE</strong></p>
+
+                <div class="modal-table-container">
+                    <table class="extinguisher-table">
+                        <thead>
+                            <tr>
+                                <th>Extinguisher Size</th>
+                                <th>Ideal For</th>
+                                <th>Typical Use Locations</th>
+                                <th>Recommended When</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1 KG</td>
+                                <td>Small/Spot Fights</td>
+                                <td>Cars, Motorcycles, Small Rooms</td>
+                                <td>Minor fires at home, in vehicles</td>
+                            </tr>
+                            <tr>
+                                <td>2 KG</td>
+                                <td>Compact Spaces</td>
+                                <td>Flats, Shops, Reception Desks</td>
+                                <td>Basic protection for single rooms</td>
+                            </tr>
+                            <tr>
+                                <td>4 KG</td>
+                                <td>General Safety</td>
+                                <td>Home Kitchens, Small Shops</td>
+                                <td>Moderate fire risks, slightly larger</td>
+                            </tr>
+                            <tr>
+                                <td>6 KG</td>
+                                <td>Large Rooms</td>
+                                <td>Corporate Offices, Retail Stores</td>
+                                <td>Standard commercial</td>
+                            </tr>
+                            <tr>
+                                <td>9 KG</td>
+                                <td>High-Risk & Large Areas</td>
+                                <td>Warehouses, Factories, Schools</td>
+                                <td>For bigger premises</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="modal-pricing">
+                    <p>New : price range starts from Rs950*</p>
+                    <p>Refilling: price range starts from Rs195*</p>
+                </div>
+
+                <p class="modal-note">Note: If bulk order is placed, price can be discussed.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Floating Actions & Scripts -->
     <div class="floating-actions"><a href="https://wa.me/919824186063" target="_blank" class="fab fab-whatsapp"><i class="fa-brands fa-whatsapp"></i></a></div>

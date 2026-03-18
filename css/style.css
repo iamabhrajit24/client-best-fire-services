@@ -739,6 +739,146 @@ textarea.form-control {
   margin-right: 0.5rem;
 }
 
+/* Modals */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-content {
+  background-color: var(--surface-color);
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  animation: modalIn 0.3s ease;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--surface-light);
+  border: none;
+  color: var(--white);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all var(--transition-fast);
+}
+
+.modal-close:hover {
+  background: var(--primary-color);
+  transform: rotate(90deg);
+}
+
+.modal-header-img {
+  background-color: var(--white);
+  padding: 2rem;
+  border-bottom: 2px solid var(--primary-color);
+  text-align: center;
+}
+
+.modal-header-img img {
+  max-height: 250px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.modal-body {
+  padding: 2.5rem;
+}
+
+.modal-lead {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.modal-makes {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.modal-table-container {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.extinguisher-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.extinguisher-table th {
+  background-color: var(--surface-light);
+  color: var(--white);
+  padding: 1rem;
+  font-family: var(--font-heading);
+  border: 1px solid var(--border-color);
+}
+
+.extinguisher-table td {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+}
+
+.extinguisher-table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.modal-pricing {
+  background-color: rgba(255, 183, 3, 0.1);
+  border-left: 4px solid var(--secondary-color);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-pricing p {
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-pricing p:last-child {
+  margin-bottom: 0;
+}
+
+.modal-note {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
 /* Footer */
 .footer {
   background-color: var(--surface-color);

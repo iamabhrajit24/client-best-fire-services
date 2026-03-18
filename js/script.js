@@ -192,3 +192,28 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+// --- Modal Functions ---
+window.openAbcModal = function() {
+  const modal = document.getElementById('abcModal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  }
+};
+
+window.closeAbcModal = function() {
+  const modal = document.getElementById('abcModal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+};
+
+// Close modal when clicking outside of it
+window.addEventListener('click', (e) => {
+  const modal = document.getElementById('abcModal');
+  if (e.target === modal) {
+    closeAbcModal();
+  }
+});
