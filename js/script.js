@@ -242,11 +242,28 @@ window.closeFoamModal = function() {
   }
 };
 
+window.openEquipmentModal = function() {
+  const modal = document.getElementById('equipmentModal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; 
+  }
+};
+
+window.closeEquipmentModal = function() {
+  const modal = document.getElementById('equipmentModal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+};
+
 // Close modal when clicking outside of it
 window.addEventListener('click', (e) => {
   const abcModal = document.getElementById('abcModal');
   const co2Modal = document.getElementById('co2Modal');
   const foamModal = document.getElementById('foamModal');
+  const equipmentModal = document.getElementById('equipmentModal');
   if (e.target === abcModal) {
     closeAbcModal();
   }
@@ -255,5 +272,8 @@ window.addEventListener('click', (e) => {
   }
   if (e.target === foamModal) {
     closeFoamModal();
+  }
+  if (e.target === equipmentModal) {
+    closeEquipmentModal();
   }
 });

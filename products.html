@@ -135,7 +135,7 @@
             
             <div class="grid-3 reveal">
                 <!-- Equipment Listing instead of multiple cards -->
-                <div class="card" style="grid-column: 1 / -1;">
+                <div class="card" id="equipmentCard" style="grid-column: 1 / -1; cursor: pointer;" onclick="openEquipmentModal()">
                     <div class="card-content">
                         <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-around;">
                             <div style="flex: 1; min-width: 250px;">
@@ -148,7 +148,7 @@
                             </div>
                             <div style="flex: 1; min-width: 250px;">
                                 <h3 class="text-primary"><i class="fa-solid fa-shower"></i> Sprinkler System</h3>
-                                <p class="text-muted">Ceiling mounted automatic fire sprinklers for rapid automated response to rising termperatures.</p>
+                                <p class="text-muted">Ceiling mounted automatic fire sprinklers for rapid automated response to rising temperatures.</p>
                             </div>
                         </div>
                         <hr style="border: 1px solid var(--border-color); margin: 2rem 0;">
@@ -169,13 +169,16 @@
                         <hr style="border: 1px solid var(--border-color); margin: 2rem 0;">
                         <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-around;">
                             <div style="flex: 1; min-width: 250px;">
-                                <h3 class="text-primary"><i class="fa-solid fa-helmet-safety"></i> Helmets & Gloves</h3>
+                                <h3 class="text-primary"><i class="fa-solid fa-helmet-safety"></i> Helmets &amp; Gloves</h3>
                                 <p class="text-muted">Industrial and structural firefighting helmets, and heat-resistant gloves.</p>
                             </div>
                             <div style="flex: 1; min-width: 250px;">
                                 <h3 class="text-primary"><i class="fa-solid fa-gear"></i> Hose Valves</h3>
                                 <p class="text-muted">High-pressure brass and gunmetal valves for hydrant systems.</p>
                             </div>
+                        </div>
+                        <div class="text-center" style="margin-top: 2rem;">
+                            <span class="text-secondary" style="font-weight: 600;"><i class="fa-solid fa-hand-pointer"></i> Click to view full product range</span>
                         </div>
                     </div>
                 </div>
@@ -400,6 +403,98 @@
                 </div>
 
                 <p class="modal-note" style="margin-top: 1.5rem;"><strong>Note:</strong> Bulk order pricing can be discussed and formalized upon request. Prices may vary based on specific makes and certifications.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fire Safety Equipment Modal -->
+    <div id="equipmentModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeEquipmentModal()"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="modal-header-img" style="background-color: #f5f5f5;">
+                <img src="/assets/images/safety_equipment_collage.png" alt="Fire Safety Equipment Range" style="max-height: 350px;">
+            </div>
+
+            <div class="modal-body">
+                <h2 class="text-primary" style="margin-bottom: 0.5rem; text-transform: uppercase;">Fire Safety Equipment</h2>
+                <div style="height: 2px; width: 50px; background: var(--secondary-color); margin-bottom: 1.5rem;"></div>
+
+                <p class="modal-lead">WE SUPPLY A <strong>COMPLETE RANGE OF FIRE SAFETY EQUIPMENT, ACCESSORIES, AND SIGNAGE</strong> FOR INDUSTRIAL, COMMERCIAL, AND RESIDENTIAL USE.</p>
+
+                <div class="modal-table-container">
+                    <table class="extinguisher-table">
+                        <thead>
+                            <tr>
+                                <th>Equipment</th>
+                                <th>Description</th>
+                                <th>Ideal For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Fire Hose Box</strong></td>
+                                <td>Single & double door GI/MS hose boxes for storing delivery hoses, branch pipes, and hydrant accessories</td>
+                                <td>Factories, Commercial Buildings</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fire Alarm System</strong></td>
+                                <td>Smoke detectors, heat detectors, manual call points (MCP), and centralized control panels</td>
+                                <td>Offices, Schools, Warehouses</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sprinkler System</strong></td>
+                                <td>Ceiling mounted automatic fire sprinklers for rapid automated temperature response</td>
+                                <td>Large Warehouses, Malls, Plants</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fire Buckets</strong></td>
+                                <td>Standard red-painted sand/water fire buckets with stands and sheds</td>
+                                <td>Open Areas, Small Operations</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fire Ball (AFO)</strong></td>
+                                <td>Auto fire extinguisher balls that burst upon contact with flame, self-activating suppression</td>
+                                <td>Unmanned Areas, Electrical Rooms</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Extinguisher Boxes</strong></td>
+                                <td>Metal and plastic wall-mount boxes for single or multi-unit extinguisher storage</td>
+                                <td>All Buildings, Corridors</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hydrant Valves</strong></td>
+                                <td>High-pressure brass and gunmetal landing valves for hydrant systems</td>
+                                <td>Industrial Hydrant Networks</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Helmets & Gloves</strong></td>
+                                <td>Industrial and structural firefighting helmets, heat-resistant gloves, and safety boots</td>
+                                <td>Fire Teams, Factory Workers</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Safety Signage</strong></td>
+                                <td>Photoluminescent exit signs, no smoking boards, assembly point markers, and fire extinguisher location signs</td>
+                                <td>All Premises (Mandatory)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Safety Cones</strong></td>
+                                <td>High-visibility traffic and hazard cones for marking danger zones</td>
+                                <td>Construction Sites, Factories</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="modal-pricing">
+                    <p class="price-line"><i class="fa-solid fa-circle-info" style="color: var(--secondary-color); margin-right: 0.5rem;"></i> Pricing varies by product type, quantity, and specifications. <strong style="color: var(--secondary-color);">Contact us for a custom quote.</strong></p>
+                </div>
+
+                <p class="modal-note"><strong>Note:</strong> All equipment supplied is ISI/BIS certified where applicable. Bulk and institutional orders welcome with competitive pricing.</p>
+
+                <div class="text-center" style="margin-top: 1.5rem;">
+                    <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Enquire For Pricing</a>
+                </div>
             </div>
         </div>
     </div>
