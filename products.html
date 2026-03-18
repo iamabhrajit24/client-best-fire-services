@@ -96,14 +96,16 @@
                 </div>
 
                 <!-- Product 3 -->
-                <div class="card">
-                    <img src="/assets/images/foam_extinguisher.png" alt="Mechanical Foam" class="card-img" loading="lazy">
+                <div class="card" id="foamCard" style="cursor: pointer;" onclick="openFoamModal()">
+                    <img src="/assets/images/foam_collage.png" alt="9L and 45L Mechanical Foam" class="card-img" loading="lazy">
                     <div class="card-content">
                         <h3 class="card-title">Mechanical Foam</h3>
                         <p class="card-desc">Ideal for Class B liquid fires (petrol, diesel, oils). Forms an aqueous film that prevents oxygen supply and stops re-ignition.</p>
                         <ul class="text-muted" style="list-style-type: disc; margin-left: 1rem; margin-bottom: 1rem;">
                             <li><strong class="text-primary">Best Use:</strong> Chemical Plants, Petrol Pumps, Garages</li>
                             <li>Available Sizes: 9L, 45L</li>
+                            <li>AFFF Foam Concentrate</li>
+                            <li>ISI Certified</li>
                         </ul>
                     </div>
                 </div>
@@ -337,6 +339,64 @@
                 </div>
 
                 <p class="modal-note"><strong>Note:</strong> Bulk order pricing can be discussed and formalized upon request. Prices may vary based on specific makes and certifications.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mechanical Foam Extinguisher Modal -->
+    <div id="foamModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeFoamModal()"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="modal-header-img">
+                <img src="/assets/images/foam_collage.png" alt="9L and 45L Mechanical Foam Extinguishers">
+            </div>
+
+            <div class="modal-body">
+                <h2 class="text-primary" style="margin-bottom: 0.5rem; text-transform: uppercase;">Mechanical Foam Extinguisher</h2>
+                <div style="height: 2px; width: 50px; background: var(--secondary-color); margin-bottom: 1.5rem;"></div>
+
+                <p class="modal-lead">WE HAVE <strong>CAPACITY OF 9L, 45L MECHANICAL FOAM TYPE CYLINDERS ISI CERTIFIED</strong> AVAILABLE WITH US.</p>
+                <p class="modal-makes">MAKES: <strong>MAHAVIR, SAFEPRO</strong></p>
+
+                <div class="modal-table-container">
+                    <table class="extinguisher-table">
+                        <thead>
+                            <tr>
+                                <th>Model / Size</th>
+                                <th>Typical Use Locations</th>
+                                <th>Suitable For Fires</th>
+                                <th>Features & Advantages</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>9 Litre</td>
+                                <td>Shops, Small Factories, Schools</td>
+                                <td>Class A (Solids) & B (Liquids)</td>
+                                <td>Efficient for small-scale fires, easy to use</td>
+                            </tr>
+                            <tr>
+                                <td>45 Litre <br><small>(Trolley Mounted)</small></td>
+                                <td>Warehouses, Large Factories, Petrol Pumps</td>
+                                <td>Class A (Solids) & B (Liquids)</td>
+                                <td>Large capacity, rapid suppression, mobile</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="modal-pricing">
+                    <p class="price-line"><span class="price-label">New:</span> Starts from <strong>Rs 1760*</strong></p>
+                    <p class="price-line"><span class="price-label">Refilling:</span> Starts from <strong>Rs 395*</strong></p>
+                </div>
+
+                <div style="background-color: rgba(230, 57, 70, 0.1); border-left: 4px solid var(--primary-color); padding: 1.5rem; border-radius: 4px; margin-top: 1rem;">
+                    <p style="color: var(--primary-color); font-weight: 800; text-transform: uppercase; margin-bottom: 0.5rem;"><i class="fa-solid fa-triangle-exclamation"></i> Important Note:</p>
+                    <p style="color: var(--text-main); font-size: 0.95rem; line-height: 1.5;"><strong>DO NOT use foam extinguishers on live electrical equipment.</strong> Ensure power is isolated before use in areas with electrical hazards.</p>
+                </div>
+
+                <p class="modal-note" style="margin-top: 1.5rem;"><strong>Note:</strong> Bulk order pricing can be discussed and formalized upon request. Prices may vary based on specific makes and certifications.</p>
             </div>
         </div>
     </div>

@@ -226,14 +226,34 @@ window.closeCo2Modal = function() {
   }
 };
 
+window.openFoamModal = function() {
+  const modal = document.getElementById('foamModal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; 
+  }
+};
+
+window.closeFoamModal = function() {
+  const modal = document.getElementById('foamModal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+};
+
 // Close modal when clicking outside of it
 window.addEventListener('click', (e) => {
   const abcModal = document.getElementById('abcModal');
   const co2Modal = document.getElementById('co2Modal');
+  const foamModal = document.getElementById('foamModal');
   if (e.target === abcModal) {
     closeAbcModal();
   }
   if (e.target === co2Modal) {
     closeCo2Modal();
+  }
+  if (e.target === foamModal) {
+    closeFoamModal();
   }
 });
