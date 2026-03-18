@@ -161,7 +161,13 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .then(response => {
         if (response.ok) {
-          alert('enquiry sent. thanks for your time, we will contact you as soon as we can');
+          const successMsg = document.getElementById('formSuccess');
+          if (successMsg) {
+            successMsg.style.display = 'block';
+            setTimeout(() => {
+              successMsg.style.display = 'none';
+            }, 7000);
+          }
           form.reset();
         } else {
           response.json().then(data => {
