@@ -860,17 +860,27 @@ textarea.form-control {
   border-left: 4px solid var(--secondary-color);
   padding: 1.5rem;
   margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.modal-pricing p {
+.price-line {
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+.price-label {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-right: 0.5rem;
+}
+
+.price-line strong {
   color: var(--secondary-color);
-  font-weight: 700;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.modal-pricing p:last-child {
-  margin-bottom: 0;
+  font-size: 1.3rem;
 }
 
 .modal-note {

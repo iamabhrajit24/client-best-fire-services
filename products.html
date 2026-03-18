@@ -81,7 +81,7 @@
                 </div>
 
                 <!-- Product 2 -->
-                <div class="card">
+                <div class="card" id="co2Card" style="cursor: pointer;" onclick="openCo2Modal()">
                     <img src="/assets/images/co2_extinguisher.png" alt="CO2 Type Extinguisher" class="card-img" loading="lazy">
                     <div class="card-content">
                         <h3 class="card-title">CO2 Type <i class="fa-solid fa-star text-secondary" style="font-size: 1rem; margin-left: 0.5rem;" title="Bestseller"></i></h3>
@@ -204,7 +204,7 @@
 
             <div class="modal-body">
                 <p class="modal-lead">WE HAVE <strong>CAPACITY OF 1KG, 2KG, 4KG, 6KG, 9KG ABC S/F TYPE CYLINDERS ISI CERTIFIED</strong> AVAILABLE WITH US.</p>
-                <p class="modal-makes">MAKES: <strong>MAHAVIR, STOPFAST, SAFIRE, SAFEPRO, SAFETYONE, REDBOTTLE</strong></p>
+                <p class="modal-makes">MAKES: <strong>MAHAVIR, STOPFAST, SAFIRE, SAFEPRO, SAFETYONE, REDBOTTLE, KANEX</strong></p>
 
                 <div class="modal-table-container">
                     <table class="extinguisher-table">
@@ -252,11 +252,78 @@
                 </div>
 
                 <div class="modal-pricing">
-                    <p>New : price range starts from Rs950*</p>
-                    <p>Refilling: price range starts from Rs195*</p>
+                    <p class="price-line"><span class="price-label">New:</span> Starts from <strong>Rs 950*</strong></p>
+                    <p class="price-line"><span class="price-label">Refilling:</span> Starts from <strong>Rs 195*</strong></p>
                 </div>
 
-                <p class="modal-note">Note: If bulk order is placed, price can be discussed.</p>
+                <p class="modal-note"><strong>Note:</strong> Bulk order pricing can be discussed and formalized upon request.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CO2 Extinguisher Modal -->
+    <div id="co2Modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCo2Modal()"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="modal-header-img">
+                <img src="/assets/images/co2_extinguisher.png" alt="CO2 Type Fire Extinguishers">
+            </div>
+
+            <div class="modal-body">
+                <p class="modal-lead">WE HAVE <strong>CAPACITY OF 2KG, 3KG, 4.5KG, 9KG, 22.5KG CO2 AND TROLLEY CO2 TYPE CYLINDERS ISI CERTIFIED</strong> AVAILABLE WITH US.</p>
+                <p class="modal-makes">MAKES: <strong>MAHAVIR, STOPFAST, SAFIRE, SAFEPRO, KANEX</strong></p>
+
+                <div class="modal-table-container">
+                    <table class="extinguisher-table">
+                        <thead>
+                            <tr>
+                                <th>Model / Size</th>
+                                <th>Typical Use Locations</th>
+                                <th>Suitable For Fires</th>
+                                <th>Features & Advantages</th>
+                                <th>Recommended When</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2 KG CO₂</td>
+                                <td>Home, Offices, Computer Labs</td>
+                                <td>Class B, C (Electrical, Liquid)</td>
+                                <td>Compact, easy to handle, quick discharge</td>
+                                <td>Small electrical setups, IT rooms, vehicles</td>
+                            </tr>
+                            <tr>
+                                <td>4.5 KG CO₂</td>
+                                <td>Shops, Offices, Server Rooms</td>
+                                <td>Class B, C (Electrical, Liquid)</td>
+                                <td>Higher capacity, ideal for medium</td>
+                                <td>Where more discharge or area is required</td>
+                            </tr>
+                            <tr>
+                                <td>9 KG CO₂</td>
+                                <td>Factories, Large Offices, Industrial</td>
+                                <td>Class B, C (Electrical, Liquid)</td>
+                                <td>Industrial use, high capacity</td>
+                                <td>Larger workspaces with significant risks</td>
+                            </tr>
+                            <tr>
+                                <td>Trolley CO₂</td>
+                                <td>Factories, Warehouses</td>
+                                <td>Large-scale Class B, C</td>
+                                <td>Rapid mobility, very high volume</td>
+                                <td>Sites with high risk or regulations for heavy duty</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="modal-pricing">
+                    <p class="price-line"><span class="price-label">New:</span> Starts from <strong>Rs 3400* <span style="font-size: 0.8em; color: var(--text-muted); font-weight: 500;">(4.5kg rate)</span></strong></p>
+                    <p class="price-line"><span class="price-label">Refilling:</span> Starts from <strong>Rs 295*</strong></p>
+                </div>
+
+                <p class="modal-note"><strong>Note:</strong> Bulk order pricing can be discussed and formalized upon request.</p>
             </div>
         </div>
     </div>
