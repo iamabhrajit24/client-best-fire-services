@@ -139,14 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // --- Simple Form Submission Handling (Prevent default for demo) ---
-  const contactForms = document.querySelectorAll('form');
-  contactForms.forEach(form => {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Thank you for your enquiry! We will get back to you shortly.');
-      form.reset();
-    });
-  });
+  // --- Form Submission Handling ---
+  // The default prevent has been removed to allow the FormSubmit action to work.
+  // The form will now actually send an email instead of just showing a popup.
 
 });
