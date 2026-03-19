@@ -1,4 +1,13 @@
+# robots.txt — Best Fire Services (https://bestfireservices.in)
+
+# Allow all well-behaved crawlers full access
 User-agent: *
 Allow: /
 
+# Block access to any development or private paths (add more as needed)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+
+# Sitemap location
 Sitemap: https://bestfireservices.in/sitemap.xml
