@@ -113,12 +113,17 @@
                     </div>
                 </div>
                 
-                <!-- Product 4 -->
-                <div class="card">
-                    <img src="/assets/images/co2_trolley.png" alt="CO2 Trolley Extinguisher" class="card-img" loading="lazy">
+                <!-- Product 4 - Others Available (Clickable) -->
+                <div class="card others-card" id="othersCard" style="cursor: pointer;" onclick="openOthersModal()">
+                    <div class="others-card-preview">
+                        <img src="/assets/images/kitchen_ss_extinguisher.jpg" alt="Kitchen SS Extinguisher" class="others-thumb">
+                        <img src="/assets/images/water_type_extinguisher.png" alt="Water Type Extinguisher" class="others-thumb">
+                        <img src="/assets/images/dry_powder_extinguisher.png" alt="Dry Powder Extinguisher" class="others-thumb">
+                    </div>
                     <div class="card-content">
-                        <h3 class="card-title text-secondary">Others Available</h3>
-                        <p class="card-desc">We also supply a variety of other specialized fire extinguishers including Clean Agent, Water CO2, and specialized powder types upon request.</p>
+                        <h3 class="card-title text-secondary">Others Available <i class="fa-solid fa-circle-plus" style="font-size:1rem; margin-left:0.4rem;"></i></h3>
+                        <p class="card-desc">Kitchen / Stainless Steel, Water Type, and Dry Powder extinguishers — specialized solutions for every fire risk scenario. Click to explore.</p>
+                        <span class="text-secondary" style="font-weight:600; font-size:0.9rem;"><i class="fa-solid fa-hand-pointer"></i> Click to View Details</span>
                     </div>
                 </div>
             </div>
@@ -195,7 +200,7 @@
         <!-- Reused Footer HTML -->
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 @ Best Fire Services. All Rights Reserved.</p>
+                <p>&copy; 2026 Best Fire Services. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -492,6 +497,99 @@
                 </div>
 
                 <p class="modal-note"><strong>Note:</strong> All equipment supplied is ISI/BIS certified where applicable. Bulk and institutional orders welcome with competitive pricing.</p>
+
+                <div class="text-center" style="margin-top: 1.5rem;">
+                    <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Enquire For Pricing</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Others Available Modal -->
+    <div id="othersModal" class="modal-overlay">
+        <div class="modal-content modal-content-wide">
+            <button class="modal-close" onclick="closeOthersModal()"><i class="fa-solid fa-xmark"></i></button>
+
+            <div class="modal-body">
+                <h2 class="text-primary" style="margin-bottom: 0.5rem; text-transform: uppercase;">Other Extinguisher Types</h2>
+                <div style="height: 2px; width: 50px; background: var(--secondary-color); margin-bottom: 0.5rem;"></div>
+                <p class="modal-lead" style="margin-bottom: 2rem;">Beyond our core range, we supply <strong>specialized extinguisher types</strong> for kitchens, water-based suppression, and heavy-duty powder applications — all ISI certified.</p>
+
+                <!-- Section 1: Kitchen / SS Extinguisher -->
+                <div class="others-section">
+                    <div class="others-section-img">
+                        <img src="/assets/images/kitchen_ss_extinguisher.jpg" alt="Kitchen Stainless Steel Extinguisher">
+                    </div>
+                    <div class="others-section-info">
+                        <h3 class="text-secondary others-type-title"><i class="fa-solid fa-utensils"></i> Kitchen / Stainless Steel Type</h3>
+                        <div style="height:2px; width:40px; background:var(--primary-color); margin-bottom:1rem;"></div>
+                        <p class="modal-lead">WE HAVE <strong>KITCHEN TYPE SS (STAINLESS STEEL) EXTINGUISHERS ISI CERTIFIED</strong> AVAILABLE WITH US.</p>
+                        <p class="modal-makes">MAKES: <strong>SAFE PRO, SAFEPRO, KANEX</strong></p>
+                        <table class="extinguisher-table" style="margin-top:1rem;">
+                            <thead><tr><th>Feature</th><th>Details</th></tr></thead>
+                            <tbody>
+                                <tr><td>Body Material</td><td>Food-grade Stainless Steel (SS)</td></tr>
+                                <tr><td>Agent</td><td>Wet Chemical / K-Class Agent</td></tr>
+                                <tr><td>Fire Class</td><td>Class K (Cooking Oils &amp; Fats) + Class A</td></tr>
+                                <tr><td>Best Use</td><td>Commercial Kitchens, Restaurants, Food Processing</td></tr>
+                                <tr><td>Available Sizes</td><td>2L, 4L, 6L, 9L</td></tr>
+                                <tr><td>Certification</td><td>ISI Certified</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <hr class="others-divider">
+
+                <!-- Section 2: Water Type -->
+                <div class="others-section">
+                    <div class="others-section-img">
+                        <img src="/assets/images/water_type_extinguisher.png" alt="Water Type Extinguisher">
+                    </div>
+                    <div class="others-section-info">
+                        <h3 class="text-secondary others-type-title"><i class="fa-solid fa-droplet"></i> Water Type Extinguisher</h3>
+                        <div style="height:2px; width:40px; background:var(--primary-color); margin-bottom:1rem;"></div>
+                        <p class="modal-lead">WE HAVE <strong>WATER CO2 &amp; TROLLEY WATER TYPE CYLINDERS ISI CERTIFIED</strong> AVAILABLE WITH US.</p>
+                        <p class="modal-makes">MAKES: <strong>MAHAVIR, SAFE PRO, SAFEPRO</strong></p>
+                        <table class="extinguisher-table" style="margin-top:1rem;">
+                            <thead><tr><th>Model / Size</th><th>Best Use</th><th>Fire Class</th><th>Features</th></tr></thead>
+                            <tbody>
+                                <tr><td>9 Litre (Stored Pressure)</td><td>Schools, Offices, Wood/Paper Storage</td><td>Class A (Solids)</td><td>Eco-friendly, no chemical residue</td></tr>
+                                <tr><td>9 Litre CO2 Cartridge</td><td>Libraries, Archives, Heritage Buildings</td><td>Class A (Solids)</td><td>Deep-penetrating water mist</td></tr>
+                                <tr><td>50 Litre (Trolley)</td><td>Warehouses, Large Factories, Open Yards</td><td>Class A (Solids)</td><td>High capacity, rapid deployment</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <hr class="others-divider">
+
+                <!-- Section 3: Dry Powder -->
+                <div class="others-section">
+                    <div class="others-section-img">
+                        <img src="/assets/images/dry_powder_extinguisher.png" alt="Dry Powder Extinguisher">
+                    </div>
+                    <div class="others-section-info">
+                        <h3 class="text-secondary others-type-title"><i class="fa-solid fa-fire-extinguisher"></i> Dry Powder (BC / DC) Extinguisher</h3>
+                        <div style="height:2px; width:40px; background:var(--primary-color); margin-bottom:1rem;"></div>
+                        <p class="modal-lead">WE HAVE <strong>BC / DC TYPE DRY POWDER EXTINGUISHERS &amp; TROLLEYS ISI CERTIFIED</strong> AVAILABLE WITH US.</p>
+                        <p class="modal-makes">MAKES: <strong>MAHAVIR, SAFE PRO, SAFEPRO, STOPFAST</strong></p>
+                        <table class="extinguisher-table" style="margin-top:1rem;">
+                            <thead><tr><th>Model / Size</th><th>Best Use</th><th>Fire Class</th><th>Features</th></tr></thead>
+                            <tbody>
+                                <tr><td>25 KG (Trolley)</td><td>Petrol Pumps, Chemical Plants, Gas Cylinders</td><td>Class B &amp; C (Liquids, Gas)</td><td>Large area coverage, mobile unit</td></tr>
+                                <tr><td>50 KG (Trolley)</td><td>Refineries, Fuel Depots, Large Factories</td><td>Class B &amp; C (Liquids, Gas)</td><td>Industrial-grade, high suppression</td></tr>
+                                <tr><td>4 KG / 6 KG / 9 KG</td><td>LPG Areas, Garages, Workshops</td><td>Class B &amp; C (Liquids, Gas)</td><td>Compact, ISI approved, fast action</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="modal-pricing" style="margin-top: 1.5rem;">
+                    <p class="price-line"><i class="fa-solid fa-circle-info" style="color: var(--secondary-color); margin-right: 0.5rem;"></i> Pricing varies by type, capacity, and make. <strong style="color: var(--secondary-color);">Contact us for a custom quote.</strong></p>
+                </div>
+
+                <p class="modal-note"><strong>Note:</strong> All products are ISI/BIS certified. Bulk and institutional orders are welcome with competitive pricing.</p>
 
                 <div class="text-center" style="margin-top: 1.5rem;">
                     <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Enquire For Pricing</a>
