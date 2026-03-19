@@ -390,7 +390,8 @@ img {
   display: flex;
   align-items: center;
   position: relative;
-  background-image: url("../assets/images/hero_extinguishers_dark_bg.png");
+  background-color: var(--bg-color);
+  background-image: none;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -433,8 +434,8 @@ img {
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #7a2000;
-  background: rgba(0,0,0,0.08);
+  color: var(--secondary-color);
+  background: rgba(255,255,255,0.06);
   padding: 0.35rem 1.1rem;
   border-radius: 50px;
   display: inline-block;
@@ -447,9 +448,9 @@ img {
   text-transform: uppercase;
   line-height: 1.1;
   margin-bottom: 1.2rem;
-  color: #1a0a00;
+  color: var(--white);
   letter-spacing: 1px;
-  text-shadow: 0 2px 8px rgba(255,255,255,0.18);
+  text-shadow: 0 2px 16px rgba(0,0,0,0.6);
 }
 
 .hero-title-accent {
@@ -460,18 +461,18 @@ img {
 }
 
 .hero-desc-dark {
-  font-size: 1.05rem;
-  color: #2d1500;
+  font-size: 1.1rem;
+  color: var(--secondary-color);
   margin-bottom: 2.2rem;
   max-width: 520px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.75;
 }
 
 .hero-desc-dark em {
   font-style: italic;
   font-weight: 700;
-  color: #8b1a1a;
+  color: var(--secondary-light);
 }
 
 .hero-buttons-center {
@@ -490,11 +491,11 @@ img {
 
 .hero-showcase-img {
   width: 100%;
-  max-width: 520px;
+  max-width: 620px;
   height: auto;
-  object-fit: cover;
-  border-radius: 12px;
-  filter: drop-shadow(0 10px 40px rgba(0,0,0,0.7));
+  object-fit: contain;
+  border-radius: 0;
+  filter: drop-shadow(0 20px 50px rgba(230,57,70,0.25)) drop-shadow(0 0 0 transparent);
   animation: floatShowcase 7s ease-in-out infinite;
 }
 
@@ -518,14 +519,14 @@ img {
   letter-spacing: 1px;
   cursor: pointer;
   transition: all var(--transition-normal);
-  border: 2px solid #1a0a00;
+  border: 2px solid var(--white);
   background-color: transparent;
-  color: #1a0a00;
+  color: var(--white);
 }
 
 .btn-hero-call:hover {
-  background-color: #1a0a00;
-  color: var(--secondary-color);
+  background-color: var(--white);
+  color: var(--black);
   transform: translateY(-2px);
 }
 
