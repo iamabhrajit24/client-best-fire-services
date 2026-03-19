@@ -390,7 +390,7 @@ img {
   display: flex;
   align-items: center;
   position: relative;
-  background-image: url("../assets/images/hero_bg_new.png");
+  background-image: url("../assets/images/hero_bg_fire_drill.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -434,6 +434,59 @@ img {
 .hero-buttons {
   display: flex;
   gap: 1rem;
+}
+
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 100%;
+}
+
+.hero-image-side {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.hero-extinguishers-img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.8));
+  animation: float 6s ease-in-out infinite;
+  z-index: 5;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+@media (max-width: 992px) {
+  .hero-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+  }
+  
+  .hero-image-side {
+    justify-content: center;
+  }
+  
+  .hero-extinguishers-img {
+    max-width: 80%;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
 }
 
 /* Cards (Products & Services) */
