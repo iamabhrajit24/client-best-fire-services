@@ -10,20 +10,32 @@
 </head>
 <body>
 
+    <!-- Global Sticky Wrapper -->
+    <div class="sticky-wrapper">
     <!-- Topbar -->
-    <div class="topbar">
-        <div class="container topbar-inner" style="align-items: center;">
-            <div style="display: flex; align-items: center; margin-right: 15px; border-right: 1px solid rgba(255,255,255,0.2); padding-right: 15px;">
-                <img src="/assets/images/ganesha_om.png" alt="Auspicious Symbol" style="height: 38px; border-radius: 4px; border: 1px solid var(--primary-color); box-shadow: 0 0 10px rgba(230, 57, 70, 0.4);">
-            </div>
-            <div style="flex: 1; display: flex; justify-content: space-between;">
-                <div class="topbar-contact">
-                    <a href="tel:+919824186063"><i class="fa-solid fa-phone"></i> +91 9824186063</a>
-                    <a href="mailto:bestfireservices73@gmail.com"><i class="fa-solid fa-envelope"></i> bestfireservices73@gmail.com</a>
-                    <span><i class="fa-solid fa-location-dot"></i> Sardar Patel Market, Vapi</span>
+            <div class="topbar">
+        <div class="container topbar-inner" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <div class="topbar-left">
+                <div class="auspicious-symbol-wrapper">
+                    <img src="/assets/images/ganesha_om.png" alt="Auspicious Symbol" class="auspicious-symbol">
                 </div>
-                <div class="topbar-social">
-                    <span><i class="fa-solid fa-clock"></i> Mon-Sat: 9:00 AM - 8:00 PM</span>
+            </div>
+            
+            <div class="topbar-center" style="display: flex; gap: 1.5rem; justify-content: center; flex: 1;">
+                <div class="topbar-item">
+                    <a href="tel:+919824186063"><i class="icon-phone"></i> +91 9824186063</a>
+                </div>
+                <div class="topbar-item">
+                    <a href="mailto:bestfireservices73@gmail.com"><i class="icon-email"></i> bestfireservices73@gmail.com</a>
+                </div>
+                <div class="topbar-item">
+                    <span><i class="icon-location"></i> Sardar Patel Market, Vapi</span>
+                </div>
+            </div>
+
+            <div class="topbar-right">
+                <div class="topbar-item">
+                    <span><i class="icon-clock"></i> Mon-Sat: 10:00 AM - 6:00 PM</span>
                 </div>
             </div>
         </div>
@@ -46,15 +58,21 @@
                 <a href="contact.html" class="nav-link">Contact</a>
             </nav>
             
-            <div class="nav-actions">
-                <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> Get Quote</a>
+                        <div class="nav-actions">
+                <a href="tel:+919824186063" class="btn btn-secondary btn-call-header">
+                    <i class="icon-phone"></i>
+                    <span>CALL NOW</span>
+                </a>
                 <button class="hamburger">
-                    <i class="fa-solid fa-bars"></i>
+                    <i class="icon-menu"></i>
                 </button>
             </div>
         </div>
     </header>
+    </div>
 
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay"></div>
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
@@ -139,12 +157,86 @@
         </div>
     </section>
 
-    <!-- Footer Area Minified Placeholder -->
+    <!-- SEO & Call To Action Section -->
+    <section class="section bg-primary" style="background-color: var(--primary-color); color: var(--white); text-align: center; padding: 4rem 1rem;">
+        <div class="container reveal">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; font-weight: 900;">Need Certified Fire Safety Solutions?</h2>
+            <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto 2rem; color: rgba(255,255,255,0.9);">
+                Best Fire Services is Vapi's trusted industrial leader for ISI certified fire extinguishers, hydrants, safety equipment, and comprehensive AMC refilling services. We serve Daman, Silvassa, Dadra, Pardi, Umbergaon, and Valsad.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="tel:+919824186063" class="btn btn-secondary" style="font-weight: 800; font-size: 1rem; padding: 1rem 2rem;"><i class="icon-phone"></i> Call For Immediate Quote</a>
+                <a href="contact.html" class="btn btn-outline" style="color: var(--white); border-color: var(--white); font-weight: 800; font-size: 1rem; padding: 1rem 2rem;"><i class="icon-email"></i> Email Requirements</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-        <!-- Exact same structure as index.html -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col reveal">
+                    <a href="/" class="logo" style="margin-bottom: 1.5rem;">
+                        <img src="/assets/images/logo.png" alt="Best Fire Services Logo"
+                            style="height: 45px; width: auto; margin-right: 0.5rem; background:white; border-radius:4px; padding: 2px;">
+                        <div style="color:white; font-size:1.5rem; font-weight:900; line-height:1.1; display:flex; flex-direction:column;">BEST FIRE <span style="color:var(--primary-color);">SERVICES</span></div>
+                    </a>
+                    <p class="footer-desc">Trusted supplier of fire extinguishers, safety equipment, and AMC services based in Vapi. Dedicated to protecting lives and industrial assets.</p>
+                    <div class="topbar-social" style="display: flex; gap: 1rem; margin-top:1rem;">
+                        <a href="https://wa.me/919824186063" target="_blank" style="color: var(--white); font-size: 1.5rem;"><i class="icon-whatsapp"></i></a>
+                        <a href="mailto:bestfireservices73@gmail.com" style="color: var(--white); font-size: 1.5rem;"><i class="icon-email"></i></a>
+                        <a href="tel:+919824186063" style="color: var(--white); font-size: 1.5rem;"><i class="icon-phone"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col reveal">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links" style="list-style:none; padding:0;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col reveal">
+                    <h3>Services Area</h3>
+                    <ul class="footer-links" style="list-style:none; padding:0;">
+                        <li><a href="#">Vapi & Vapi GIDC</a></li>
+                        <li><a href="#">Daman</a></li>
+                        <li><a href="#">Silvassa</a></li>
+                        <li><a href="#">Dadra</a></li>
+                        <li><a href="#">Valsad</a></li>
+                        <li><a href="#">Pardi</a></li>
+                        <li><a href="#">Umbergaon</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col reveal">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact" style="list-style:none; padding:0; display:flex; flex-direction:column; gap:1rem;">
+                        <li style="display:flex; gap:0.5rem;">
+                            <i class="icon-location" style="color:var(--primary-color); margin-top:0.2rem;"></i>
+                            <span>Shop no B/23, Sardar Patel Market<br>Opp. Vapi Railway Station<br>Vapi – 396191</span>
+                        </li>
+                        <li style="display:flex; gap:0.5rem;">
+                            <i class="icon-phone" style="color:var(--primary-color); margin-top:0.2rem;"></i>
+                            <span>+91 9824186063<br>+91 9265362729</span>
+                        </li>
+                        <li style="display:flex; gap:0.5rem;">
+                            <i class="icon-email" style="color:var(--primary-color); margin-top:0.2rem;"></i>
+                            <span>bestfireservices73@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 @ Best Fire Services. All Rights Reserved.</p>
+                <p>&copy; 2026 Best Fire Services. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

@@ -52,19 +52,28 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Hamburger Menu ---
   const hamburger = document.querySelector('.hamburger');
   const navMenu = document.querySelector('.nav-menu');
+  const menuOverlay = document.querySelector('.menu-overlay');
 
   if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {
+      // 1. Toggle Active States correctly
       navMenu.classList.toggle('active');
-      // Toggle icon between bars and times (using FontAwesome class convention, assuming FontAwesome is used)
+      if (menuOverlay) menuOverlay.classList.toggle('active');
+      
+      // 2. Manage Body Scroll
+      if (navMenu.classList.contains('active')) {
+          document.body.style.overflow = 'hidden';
+      } else {
+          document.body.style.overflow = '';
+      }
+
+      // 3. Toggle Icon from Hamburger to X
       const icon = hamburger.querySelector('i');
       if (icon) {
         if (navMenu.classList.contains('active')) {
-          icon.classList.remove('fa-bars');
-          icon.classList.add('fa-times');
+          icon.className = 'icon-close'; // Force close icon
         } else {
-          icon.classList.remove('fa-times');
-          icon.classList.add('fa-bars');
+          icon.className = 'icon-menu';  // Force menu icon
         }
       }
     });
@@ -74,13 +83,23 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
+        if (menuOverlay) menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
         const icon = hamburger.querySelector('i');
-        if (icon) {
-          icon.classList.remove('fa-times');
-          icon.classList.add('fa-bars');
-        }
+        if (icon) icon.className = 'icon-menu';
       });
     });
+
+    // Close menu when clicking background overlay
+    if (menuOverlay) {
+        menuOverlay.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+            const icon = hamburger.querySelector('i');
+            if (icon) icon.className = 'icon-menu';
+        });
+    }
   }
 
   // --- Scroll Reveal Animation ---
@@ -148,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Enquiry';
       if (submitBtn) {
-        submitBtn.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
+        submitBtn.innerHTML = 'Sending... <i class="icon-loading icon-spin"></i>';
         submitBtn.disabled = true;
       }
 
