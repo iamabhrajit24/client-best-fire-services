@@ -512,16 +512,15 @@ img {
 
 /* Hero Section */
 .hero {
-  min-height: 600px;
+  min-height: auto; /* Removed 600px to stop flexbox vertical centering from pushing content down */
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Ensure content starts at top padding */
   position: relative;
   background-color: var(--bg-color);
   background-image: none;
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-top: calc(var(--nav-height) + var(--topbar-height));
+  padding-top: 0; /* Removed redundant calc() because .sticky-wrapper already occupies document space */
   padding-bottom: 3rem;
   overflow: hidden;
 }
@@ -544,13 +543,13 @@ img {
   justify-content: space-between;
   gap: 3rem;
   width: 100%;
-  padding: 2rem 0 1rem;
+  padding: 40px 0 1rem; /* Exactly 40px gap from the header bottom */
 }
 
 .hero-center-content {
   max-width: 560px;
   text-align: left;
-  padding: 2.5rem 2rem 2.5rem 0;
+  padding: 0 2rem 2.5rem 0; /* Removed 2.5rem top padding to keep strict 40px gap */
   flex-shrink: 0;
   animation: fadeInUp 0.9s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
@@ -1593,6 +1592,10 @@ RESPONSIVE OVERRIDES (MOBILE & TABLET)
 
   .section { padding: 4.5rem 0; }
   .container { padding: 0 1rem; }
+  
+  .hero-split-wrapper {
+    padding: 20px 0 1rem !important; /* Forces 20px gap on mobile */
+  }
 
   .page-header { padding: 5rem 1rem 3rem !important; }
   .page-title { font-size: 2.2rem !important; }
